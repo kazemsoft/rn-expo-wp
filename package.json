@@ -1,0 +1,29 @@
+{
+  "name": "rn-expo-wp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build:android": "eas build --platform android",
+    "build:ios": "eas build --platform ios",
+    "setup": "node setup.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.28.3",
+    "expo": "~51.0.0",
+    "expo-constants": "~16.0.0",
+    "expo-status-bar": "~1.12.0",
+    "react": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-webview": "13.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "babel-preset-expo": "^11.0.15",
+    "react-native-dotenv": "^3.4.9"
+  },
+  "private": true
+}
