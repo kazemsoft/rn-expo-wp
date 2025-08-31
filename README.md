@@ -1,45 +1,47 @@
-# اپلیکیشن WebView وردپرس - React Native Expo
+# WordPress WebView App - React Native Expo
 
-این پروژه یک اپلیکیشن ساده React Native Expo است که از WebView برای نمایش سایت‌های وردپرس استفاده می‌کند. این پروژه طوری طراحی شده که بتوانید به راحتی آدرس سایت را تغییر دهید و اپلیکیشن‌های متعددی بسازید.
+🇺🇸 English | [🇮🇷 فارسی](README-fa.md)
 
-## ویژگی‌ها
+A simple React Native Expo application that uses WebView to display WordPress websites. This project is designed to easily change the website URL and create multiple applications by simply updating configuration files.
 
-- ✅ WebView کامل برای نمایش سایت وردپرس
-- ✅ پیکربندی آسان از طریق فایل `.env`
-- ✅ عملکرد دوبار زدن دکمه Back برای خروج از اپلیکیشن
-- ✅ نمایش پیام Toast هنگام فشردن یک بار دکمه Back
-- ✅ سازگار با Android و iOS
-- ✅ پشتیبانی از JavaScript و Local Storage
+## Features
 
-## نصب و راه‌اندازی
+- ✅ Complete WebView for displaying WordPress sites
+- ✅ Easy configuration through `.env` file
+- ✅ Double back press to exit functionality
+- ✅ Toast message display on single back press
+- ✅ Compatible with Android and iOS
+- ✅ JavaScript and Local Storage support
 
-### پیش‌نیازها
+## Installation & Setup
 
-- Node.js (نسخه 18 یا بالاتر)
+### Prerequisites
+
+- Node.js (version 18 or higher)
 - pnpm
 - Expo CLI
-- Android Studio (برای Android)
-- Xcode (برای iOS)
+- Android Studio (for Android)
+- Xcode (for iOS)
 
-### مراحل نصب
+### Installation Steps
 
-1. کلون کردن پروژه:
+1. Clone the project:
 ```bash
 git clone https://github.com/kazemsoft/rn-expo-wp.git
 cd rn-expo-wp
 ```
 
-2. نصب وابستگی‌ها:
+2. Install dependencies:
 ```bash
 pnpm install
 ```
 
-3. کپی کردن فایل پیکربندی:
+3. Copy configuration file:
 ```bash
 cp env.example .env
 ```
 
-4. ویرایش فایل `.env` و تنظیم آدرس سایت:
+4. Edit `.env` file and set your website URL:
 ```bash
 # WordPress Website URL
 WEBSITE_URL=https://your-wordpress-site.com
@@ -48,22 +50,22 @@ WEBSITE_URL=https://your-wordpress-site.com
 APP_NAME=WordPress WebView App
 ```
 
-5. اجرای پروژه:
+5. Run the project:
 ```bash
 pnpm start
 ```
 
-## استفاده مجدد برای سایت‌های مختلف
+## Reusing for Different Websites
 
-برای ایجاد اپلیکیشن جدید برای سایت دیگر:
+To create a new app for a different website:
 
-1. فایل `.env` را ویرایش کنید:
+1. Edit the `.env` file:
 ```bash
 WEBSITE_URL=https://your-new-wordpress-site.com
 APP_NAME=Your New App Name
 ```
 
-2. فایل `app.json` را ویرایش کنید:
+2. Edit the `app.json` file:
 ```json
 {
   "expo": {
@@ -74,104 +76,140 @@ APP_NAME=Your New App Name
 }
 ```
 
-3. اپلیکیشن را دوباره بیلد کنید:
+3. Rebuild the application:
 ```bash
-# برای Android
+# For Android
 expo build:android
 
-# برای iOS
+# For iOS
 expo build:ios
 ```
 
-## ساختار پروژه
+## Project Structure
 
 ```
 rn-expo-wp/
-├── App.js              # کامپوننت اصلی اپلیکیشن
-├── app.json           # پیکربندی Expo
-├── package.json       # وابستگی‌ها و اسکریپت‌ها
-├── babel.config.js    # پیکربندی Babel
-├── .env              # متغیرهای محیطی (باید خودتان بسازید)
-├── env.example       # نمونه فایل متغیرهای محیطی
-└── README.md         # مستندات
+├── App.js              # Main application component
+├── app.json           # Expo configuration
+├── package.json       # Dependencies and scripts
+├── babel.config.js    # Babel configuration
+├── config.js          # App configuration settings
+├── index.js           # Entry point
+├── setup.js           # Interactive setup script
+├── .env              # Environment variables (create yourself)
+├── env.example       # Example environment variables
+├── README.md         # English documentation
+└── README-fa.md      # Persian documentation
 ```
 
-## عملکرد دکمه Back
+## Back Button Functionality
 
-- **یک بار فشردن**: اگر در WebView امکان برگشت وجود داشته باشد، به صفحه قبل می‌رود. در غیر این صورت پیام "برای خروج دوباره کلیک کنید" نمایش می‌دهد.
-- **دوبار فشردن پشت سر هم**: از اپلیکیشن خارج می‌شود.
+- **Single press**: If WebView can go back, navigates to previous page. Otherwise shows "Press again to exit" message.
+- **Double press (consecutive)**: Exits the application.
 
-## دستورات مفید
+## Useful Commands
 
 ```bash
-# اجرای پروژه
+# Run the project
 pnpm start
 
-# اجرای روی Android
+# Run on Android
 pnpm android
 
-# اجرای روی iOS
+# Run on iOS
 pnpm ios
 
-# اجرای روی وب
+# Run on web
 pnpm web
 
-# بیلد برای Android
+# Build for Android
 pnpm build:android
 
-# بیلد برای iOS
+# Build for iOS
 pnpm build:ios
+
+# Interactive setup
+pnpm setup
 ```
 
-## تنظیمات اضافی
+## Additional Settings
 
-### تغییر آیکون اپلیکیشن
+### Changing App Icons
 
-آیکون‌های خود را در پوشه `assets/` قرار دهید:
+Place your icons in the `assets/` folder:
 - `icon.png` (1024x1024)
 - `adaptive-icon.png` (1024x1024)
 - `splash.png` (1242x2436)
 
-### تنظیمات WebView
+### WebView Settings
 
-در فایل `App.js` می‌توانید تنظیمات WebView را تغییر دهید:
+You can modify WebView settings in the `config.js` file:
 
 ```javascript
-<WebView
-  source={{ uri: WEBSITE_URL }}
-  javaScriptEnabled={true}
-  domStorageEnabled={true}
-  // سایر تنظیمات...
-/>
+WEBVIEW_SETTINGS: {
+  javaScriptEnabled: true,
+  domStorageEnabled: true,
+  startInLoadingState: true,
+  scalesPageToFit: true,
+  mixedContentMode: 'compatibility',
+  allowsBackForwardNavigationGestures: true,
+}
 ```
 
-## مشکلات رایج
+## Common Issues
 
-### خطای "Unable to resolve module '@env'"
+### "Unable to resolve module '@env'" Error
 
-اگر این خطا را مشاهده می‌کنید:
-1. مطمئن شوید فایل `.env` وجود دارد
-2. Metro bundler را ری‌استارت کنید
-3. cache را پاک کنید: `expo start --clear`
+If you encounter this error:
+1. Make sure `.env` file exists
+2. Restart Metro bundler
+3. Clear cache: `expo start --clear`
 
-### مشکل در بارگذاری سایت
+### Website Loading Issues
 
-1. مطمئن شوید URL در فایل `.env` صحیح است
-2. اتصال اینترنت را بررسی کنید
-3. مطمئن شوید سایت HTTPS دارد
+1. Ensure URL in `.env` file is correct
+2. Check internet connection
+3. Make sure website has HTTPS
 
-## مجوز
+### Babel/Dependencies Issues
 
-این پروژه تحت مجوز MIT منتشر شده است.
+If you encounter bundling errors:
+1. Run `pnpm install` to ensure all dependencies are installed
+2. Check that babel-preset-expo version matches your Expo version
+3. Clear cache with `expo start --clear`
 
-## مشارکت
+## Quick Setup
 
-برای مشارکت در پروژه:
-1. Fork کنید
-2. Branch جدید بسازید
-3. تغییرات خود را Commit کنید
-4. Pull Request ارسال کنید
+For faster setup, use the interactive setup script:
+
+```bash
+pnpm setup
+```
+
+This will guide you through:
+- Setting your WordPress website URL
+- Configuring app name
+- Creating the `.env` file automatically
+
+## License
+
+This project is released under the MIT License.
+
+## Contributing
+
+To contribute to the project:
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a Pull Request
+
+## Support
+
+If you encounter any issues or have questions:
+1. Check the [Common Issues](#common-issues) section
+2. Review the Persian documentation: [README-fa.md](README-fa.md)
+3. Create an issue in the GitHub repository
 
 ---
 
-**توجه**: این پروژه برای استفاده شخصی و تجاری آزاد است. با تغییر فایل `.env` می‌توانید بی‌نهایت اپلیکیشن مختلف بسازید.
+**Note**: This project is free for personal and commercial use. By changing the `.env` file, you can create unlimited different applications.
