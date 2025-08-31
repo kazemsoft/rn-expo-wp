@@ -25,7 +25,7 @@
 
 1. کلون کردن پروژه:
 ```bash
-git clone https://github.com/your-username/rn-expo-wp.git
+git clone https://github.com/kazemsoft/rn-expo-wp.git
 cd rn-expo-wp
 ```
 
